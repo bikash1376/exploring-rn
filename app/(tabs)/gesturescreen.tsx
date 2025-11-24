@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
+  withDecay,
   withSpring,
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
@@ -19,6 +20,8 @@ export default function GestureScreen() {
     .onEnd(() => {
       translateX.value = withSpring(0);
       translateY.value = withSpring(0);
+  //       translateX.value = withDecay({ velocity: event.velocityX });
+  // translateY.value = withDecay({ velocity: event.velocityY });
     });
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -39,7 +42,7 @@ const styles = StyleSheet.create({
   box: {
     width: 120,
     height: 120,
-    backgroundColor: 'tomato',
+    backgroundColor: 'cyan',
     borderRadius: 20,
     alignSelf: 'center',
     marginTop: 200,

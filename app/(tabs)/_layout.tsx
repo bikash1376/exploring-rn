@@ -26,10 +26,25 @@ export default function TabLayout() {
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
+          title: 'About',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="box"
+        options={{
+          title: 'Box',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="square.fill" color={color} />,
+        }}
+      />
+       <Tabs.Screen
+        name="gesturescreen"
+        options={{
+          title: 'Gesture',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      
     </Tabs>
   );
 }
